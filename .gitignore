@@ -1,0 +1,13 @@
+# Java
+target/
+*.class
+*.jar
+
+# React
+node_modules/
+build/
+dist/
+
+# General
+.env
+.DS_Store
