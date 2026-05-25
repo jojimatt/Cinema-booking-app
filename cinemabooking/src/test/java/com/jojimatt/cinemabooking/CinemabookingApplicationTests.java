@@ -1,10 +1,10 @@
-package com.cinema.booking_java;
+package com.jojimatt.cinemabooking;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BookingJavaApplicationTests {
+class CinemabookingApplicationTests {
 
 	@Test
 	void contextLoads() {
