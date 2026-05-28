@@ -1,0 +1,1 @@
+INSERT INTO movies (title, movie_language, director, release_date , duration, summary, genre) VALUES ('3 Idiots', 'Hindi','Rajkumar Hirani' ,2009-06-12,150,'This movie is about 3 young guys trying to find their passion in life. It explores friendship and romance','Comedy,Drama'  )
