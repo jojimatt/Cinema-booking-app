@@ -1,4 +1,5 @@
 package com.jojimatt.cinemabooking.dto;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.NotBlank;
 import java.sql.Date;
 
@@ -7,9 +8,6 @@ public record MovieDto(
 
         @NotBlank(message = "Title cannot be empty")
         String title,
-
-        @NotBlank(message = "Language can not be empty")
-        String language,
 
         @NotBlank(message = "Director can not be empty")
         String director,
@@ -21,10 +19,13 @@ public record MovieDto(
         @NotBlank(message = "Website can not be empty")
         String summary,
 
+        @JsonFormat(pattern = "yyyy-MM-dd")
         @NotBlank(message= "Date cannot be empty")
-        Date releaseDate,
-        @NotBlank(message= "Langugae cannot be empty")
-        String movieLanguage)
+        Date release_date,
+
+
+        @NotBlank(message= "Language cannot be empty")
+        String language)
         {
 
         }
