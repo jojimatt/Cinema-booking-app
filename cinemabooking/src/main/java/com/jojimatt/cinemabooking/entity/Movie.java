@@ -1,16 +1,12 @@
 package com.jojimatt.cinemabooking.entity;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Lob;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import java.sql.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 
 @Entity
@@ -44,6 +40,14 @@ public class Movie {
 
     @Column(name="GENRE", length=50,nullable = false)
     private String genre;
+
+    @ManyToMany
+    @JoinTable(
+            name = "movie_actors",
+            joinColumns = @JoinColumn(name = "movie_id"),
+            inverseJoinColumns = @JoinColumn(name = "actor_id")
+    )
+    private Set<Actor> actors = new HashSet<>();
 
 
 

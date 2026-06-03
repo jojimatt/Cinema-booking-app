@@ -6,6 +6,9 @@ import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.LinkedHashSet;
+import java.util.Set;
+
 @Getter
 @Setter
 @Entity
@@ -27,5 +30,8 @@ public class Actor {
     @Size(max = 300)
     @Column(name = "industry", length = 300)
     private String industry;
+
+    @ManyToMany(mappedBy = "actors")
+    private Set<Movie> movies = new LinkedHashSet<>();
 
 }
