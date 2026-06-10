@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 import java.sql.Date;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 
@@ -50,6 +51,7 @@ public class Movie {
     private Set<Actor> actors = new HashSet<>();
 
 
-
+    @OneToMany(mappedBy = "movie")
+    private Set<Screening> screenings = new LinkedHashSet<>();
 
 }
