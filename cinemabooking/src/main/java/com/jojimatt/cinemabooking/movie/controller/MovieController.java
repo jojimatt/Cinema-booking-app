@@ -20,7 +20,7 @@ public class MovieController {
 
 
     @GetMapping(path = "/public")
-    public ResponseEntity<List<MovieDto>> getAllCompanies() {
+    public ResponseEntity<List<MovieDto>> getAllMovies() {
         List<MovieDto> companyList = movieService.getAllMovies();
         // throw new RuntimeException("Exception occurred");
         return ResponseEntity.ok().body(companyList);
